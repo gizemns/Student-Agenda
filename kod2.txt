@@ -1,0 +1,68 @@
+<LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/textview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/yapilacaklar"
+            android:textColorHint="#264653"
+            android:textSize="30sp"
+            android:layout_gravity="center_horizontal"/>
+
+        <ListView
+            android:id="@+id/listView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <EditText
+            android:id="@+id/editText"
+            android:layout_width="400dp"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:autofillHints="Yapılacaklar" />
+
+        <Button
+            android:id="@+id/apply_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/apply_text"
+            android:layout_gravity="center_horizontal"
+            android:onClick="addItemTolist"/>
+        <Switch
+            android:id="@+id/switch1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal" />
+        <Button
+            android:id="@+id/save_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/save_data"
+            android:layout_gravity="center_horizontal"/>
+    </LinearLayout>
+
+
+TextView mTextViewLogin;
+
+mTextViewLogin=(TextView)findViewById(R.id.textview_login);
+
+        mTextViewLogin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent LoginIntent = new Intent(Kayit.this,MainActivity.class);
+                startActivity(LoginIntent);
+            }
+        });
+
+
+public void onSelectedDayChange(@NonNull CalendarView view, int i, int i1, int i2) {
+                String date= i + "/" + i1 + "/" + i2;
+                Log.d(TAG,"onSelectedDateChange: date: "+ date);
+            }
+        });
+
+
+
